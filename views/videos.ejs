@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="top">
+        <div class="top-menu">
+            <div class="top-menu-grid-wrapper">
+                <a href="<%= aBtn_index %>" class="btn">
+                    <div class="top-menu-btn-holder top-menu-grid-wrapper-item">
+                        <img class="btn_icon" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png">
+                    </div>
+                </a>
+    
+                <a href="<%= aBtn_videos %>" class="btn">
+                    <div class="top-menu-btn-holder top-menu-grid-wrapper-item">
+                        <img class="btn_icon" src="https://cdn-icons-png.flaticon.com/512/2791/2791441.png">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="videos-holder-wrpper">
+            <% videos_data.forEach(element => { %>
+                <div class="video-holder">
+                    <a href=" <%= element.link %> " target="_blank">
+                        <div class="video-holder-item">
+                            <div class="video-img-holder">
+                                <img class="video-img" src=" <%= element.id %> " alt=" <%= element.title %> img">
+                            </div>
+                            <div class="video-title">
+                                <p><b> <%= element.title %> </b></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+           <% }); %>
+        </div>
+    </div>
+    <div class="bottom"></div>
+</body>
+</html>
